@@ -14,7 +14,7 @@ body {
 
 /* Header section: Background image with overlay */
 header {
-  background: url("../Assets/HawaiiHeader.jpg") no-repeat center center/cover;
+  background: url("Assets/HawaiiHeader.jpg") no-repeat center center/cover;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -52,7 +52,7 @@ header {
 
 /* About Section: Large background with text content */
 .about {
-  background: url("../Assets/HawaiiLandscape.jpg") no-repeat center/cover; /* Center the image vertically and horizontally */
+  background: url("Assets/HawaiiLandscape.jpg") no-repeat center/cover; /* Center the image vertically and horizontally */
   padding: 60px;
   text-align: center;
   color: white;
@@ -93,7 +93,7 @@ header {
 .featured-destinations {
   padding: 40px;
   text-align: center;
-  background: url("../Assets/hawaiiSkyline.jpg") no-repeat center center/cover;
+  background: url("Assets/hawaiiSkyline.jpg") no-repeat center center/cover;
 }
 
 /* Destination grid layout */
@@ -245,7 +245,7 @@ header {
 /* Explore the Hawaiian Islands Section with background image */
 .explore-hawaii {
   padding: 80px;
-  background: url("../Assets/hawaiiWaves.jpg") no-repeat center center/cover; /* Add your background image */
+  background: url("Assets/hawaiiWaves.jpg") no-repeat center center/cover; /* Add your background image */
   text-align: center;
   color: white;
 }
@@ -300,7 +300,7 @@ header {
 
 /* Section background image */
 .quotes-section {
-  background: url("../Assets/hawaiiLava.jpg") no-repeat center center/cover; /* Add your background image here */
+  background: url("Assets/hawaiiLava.jpg") no-repeat center center/cover; /* Add your background image here */
   padding: 50px 20px;
   color: white;
   text-align: center;
@@ -354,7 +354,7 @@ blockquote footer {
 /* Contact Us Section with background image */
 .contact-us {
   padding: 60px;
-  background: url("../Assets/hawaiiDusk.jpg") no-repeat center center/cover; /* Add your background image */
+  background: url("Assets/hawaiiDusk.jpg") no-repeat center center/cover; /* Add your background image */
   color: rgb(255, 255, 255);
 }
 
