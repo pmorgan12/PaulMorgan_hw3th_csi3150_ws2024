@@ -1,0 +1,462 @@
+/* General styling and reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header section: Background image with overlay */
+header {
+  background: url("/Assets/HawaiiHeader.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  position: relative;
+}
+
+.header-container h1 {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a soft black shadow */
+}
+
+.header-container h3 {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Same shadow effect */
+}
+
+/* Scroll down arrow (centered horizontally) */
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%; /* Center relative to the left edge */
+  transform: translateX(-50%); /* Offset by 50% to truly center it */
+  font-size: 2rem;
+}
+
+.scroll-down a {
+  color: white;
+  text-decoration: none;
+}
+
+/* About Section: Large background with text content */
+.about {
+  background: url("/Assets/HawaiiLandscape.jpg") no-repeat center/cover; /* Center the image vertically and horizontally */
+  padding: 60px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Read More Button Styling */
+.cta-button {
+  background-color: #ffb300; /* Bright orange color */
+  color: white;
+  border: none;
+  padding: 15px 30px; /* Increased padding for a more prominent button */
+  font-size: 1.2rem; /* Slightly larger font size */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
+}
+
+/* Hover Effect */
+.cta-button:hover {
+  background-color: #e68a00; /* Darker orange on hover */
+  transform: translateY(-3px); /* Lifts the button slightly */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+}
+
+/* Featured Destinations Section */
+.featured-destinations {
+  padding: 40px;
+  text-align: center;
+  background: url("/Assets/hawaiiSkyline.jpg") no-repeat center center/cover;
+}
+
+/* Destination grid layout */
+.destination-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.destination {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.destination img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-destinations h2 {
+  font-size: 3rem; /* Increase font size */
+  color: white; /* Change color to white for better contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for visibility */
+  margin-bottom: 20px;
+}
+
+.destination h3 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Dropdown button in the bottom-left corner */
+.dropdown-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background for the button */
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Slider Section Styling */
+/* Slider Section Styling */
+        .image-slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;  /* Set height for the slider */
+            position: relative;
+            overflow: hidden;  /* Hide overflow to only show visible images */
+            background-color: black;  /* Black background for the section */
+        }
+
+        /* Left and Right Buttons (functional) */
+        .slider-button {
+            color: white;
+            border: none;
+            background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background to help buttons stand out */
+            font-size: 2rem;  /* Large arrow */
+            cursor: pointer;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .left-button {
+            left: 0;
+        }
+
+        .right-button {
+            right: 0;
+        }
+
+        .slider-button:hover {
+            color: #ffcc33;  /* Highlight color when hovered */
+        }
+
+        /* Slider Wrapper */
+        .slider-wrapper {
+            width: 100%;  /* Full width of the screen */
+            overflow: hidden;  /* Hide horizontal scrollbar */
+            display: flex;
+            height: 100%;  /* Full height of the slider */
+        }
+
+        /* Image Row */
+        .slider-images {
+            display: flex;
+            flex-wrap: nowrap;  /* Prevent wrapping of images to a new row */
+            transition: transform 0.5s ease;  /* Smooth scrolling */
+        }
+
+        .slider-images img {
+            width: 25%;  /* 25% width to fit 4 images at a time */
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;  /* Prevent images from shrinking */
+        }
+
+/* Large sections with background images for each destination */
+.location-section {
+  height: 100vh; /* Full viewport height */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.location-section .description-content {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.location-section h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.location-section p {
+  font-size: 1.5rem;
+}
+
+/* Explore the Hawaiian Islands Section with background image */
+.explore-hawaii {
+  padding: 80px;
+  background: url("/Assets/hawaiiWaves.jpg") no-repeat center center/cover; /* Add your background image */
+  text-align: center;
+  color: white;
+}
+
+/* Flexbox to space out the stats evenly and center them */
+.explore-content {
+  display: flex;
+  justify-content: space-around; /* Space out items evenly across the width */
+  align-items: center;
+  gap: 60px; /* Increase gap between stats */
+  flex-wrap: wrap; /* Ensure the stats wrap on smaller screens */
+}
+
+/* Individual Stat Styling */
+.stat {
+  text-align: center;
+}
+
+/* Circular Background for each Stat with Text inside */
+.stat-circle {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.678
+  ); /* Opaque black background for the circles */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Makes it a circle */
+  display: flex;
+  flex-direction: column; /* Stack number and text vertically */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Optional: Add a border for better visibility */
+  padding: 10px;
+}
+
+/* Description Text inside the circle */
+.stat-circle p {
+  font-size: 1rem;
+  color: white; /* Keep the description white for contrast */
+  margin-top: 5px;
+}
+
+/* Description Text */
+.stat p {
+  font-size: 1.2rem;
+  color: rgb(253, 243, 243); /* Keep the description white for contrast */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Section background image */
+.quotes-section {
+  background: url("/Assets/hawaiiLava.jpg") no-repeat center center/cover; /* Add your background image here */
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+/* Styling the section title */
+.quotes-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white; /* Ensure the title is visible on the background */
+}
+
+/* Styling the quotes container */
+.quotes-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Styling each blockquote */
+blockquote {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Semi-transparent background for better readability */
+  border-left: 5px solid #ffcc3300; /* Optional: add a border for a quote style */
+  padding: 20px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* Styling the quote text */
+blockquote p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Styling the footer (author of the quote) */
+blockquote footer {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ffffff; /* Keep the author's name gold */
+  background: none; /* Remove any background color */
+  display: inline-block; /* Ensures the footer does not stretch across */
+}
+
+/* Contact Us Section with background image */
+.contact-us {
+  padding: 60px;
+  background: url("/Assets/hawaiiDusk.jpg") no-repeat center center/cover; /* Add your background image */
+  color: rgb(255, 255, 255);
+}
+
+/* Flexbox layout to separate left and right sides */
+.contact-content {
+  display: flex;
+  justify-content: space-between; /* Space between left and right content */
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap; /* Ensure responsive design on smaller screens */
+}
+
+/* Left side: Contact Information */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Social Media Icons */
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media a {
+  font-size: 2rem;
+  color: rgb(8, 8, 8);
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #ffcc33; /* Highlight color on hover (adjust as needed) */
+}
+
+/* Right side: Contact Form */
+.contact-form {
+  flex: 1;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input and Textarea fields with white text */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: transparent; /* Clear background */
+  border: 1px solid gray; /* Gray border */
+  color: gray; /* Gray text */
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none; /* Remove the default outline */
+  transition: border-color 0.3s ease;
+}
+
+/* Change border color on focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffcc33; /* Yellow border on focus */
+}
+
+/* Placeholder text styling */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(128, 128, 128, 0.7); /* Lighter gray placeholder text */
+}
+
+.contact-form button {
+  width: 150px; /* Set width to auto so it's not as wide as the form */
+  padding: 10px 20px; /* Maintain padding for a nice look */
+  font-size: 1rem; /* Adjust the font size to your liking */
+  background-color: #ffcc33; /* Button background */
+  color: black; /* Button text color */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e6b800; /* Darker shade on hover */
+}
+
+/* Footer section */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
